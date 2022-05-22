@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(cors());
 app.use(routes);
 
-const PORT = process.env.PUBLIC_PORT || 3000;
+const PORT = process.env.PORT;
 
 app.listen(PORT, () => {
   console.log(`app is running on port: ${PORT}`);

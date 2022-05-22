@@ -34,7 +34,7 @@ const UrlForm = () => {
     e.preventDefault();
     try {
       const shortenUrl = await urlService.shortify({ url: url });
-      setShortenUrl(`http://localhost:3001/${shortenUrl}`);
+      setShortenUrl(`https://desolate-shelf-73679.herokuapp.com/${shortenUrl}`);
     } catch (err) {
       toast.error("Wrong URL!", {
         position: "top-right",
@@ -58,7 +58,7 @@ const UrlForm = () => {
               id="url"
               value={url}
               name="url"
-              className="w-64 bg-black text-white rounded-md h-8 pl-4 outline-none placeholder:text-white"
+              className="md:w-[30vw] w-[70vw] bg-black text-white rounded-md h-8 pl-4 outline-none placeholder:text-white"
               onChange={handleUrlChange}
               placeholder="enter url"
               required
@@ -73,7 +73,7 @@ const UrlForm = () => {
               name="shortenUrl"
               placeholder="shorten url"
               readOnly
-              className="w-64 bg-black text-white pl-4 outline-none cursor-default h-8 placeholder:text-white rounded-md"
+              className="md:w-[30vw] w-[70vw] bg-black text-white pl-4 outline-none cursor-default h-8 placeholder:text-white rounded-md"
             ></input>
             <AiFillCopy className="h-8 w-8" />
           </div>
